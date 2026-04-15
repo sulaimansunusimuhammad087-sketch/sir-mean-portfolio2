@@ -3,16 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sulaiman | Sir Mean — Data Analyst</title>
+<title>Sir Mean — Data Analyst</title>
 
 <style>
+:root {
+  --bg: #0a0a0f;
+  --card: #16161f;
+  --accent: #00e5c0;
+  --text: #ffffff;
+  --muted: #aaaaaa;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  background: #0a0a0f;
-  color: #fff;
+  background: var(--bg);
+  color: var(--text);
 }
 
+/* NAV */
 nav {
   padding: 20px;
   background: #111;
@@ -20,36 +29,55 @@ nav {
   justify-content: space-between;
 }
 
-nav a { color: #00e5c0; text-decoration: none; }
+nav a {
+  color: var(--accent);
+  text-decoration: none;
+  margin-left: 15px;
+}
 
+/* SECTIONS */
 section {
   padding: 60px 20px;
   max-width: 1000px;
   margin: auto;
 }
 
-h1, h2 { color: #00e5c0; }
-
-.btn {
-  padding: 10px 20px;
-  background: #00e5c0;
-  color: black;
-  text-decoration: none;
+h1, h2 {
+  color: var(--accent);
 }
 
+/* BUTTON */
+.btn {
+  padding: 10px 20px;
+  background: var(--accent);
+  color: black;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/* CARD */
 .card {
-  background: #16161f;
+  background: var(--card);
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 10px;
+}
+
+/* PROJECT IMAGE */
+img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 10px;
 }
 </style>
 </head>
 
 <body>
 
+<!-- NAV -->
 <nav>
-  <div><b>SirMean.dev</b></div>
+  <div><b>Sir Mean</b></div>
   <div>
     <a href="#projects">Projects</a>
     <a href="#about">About</a>
@@ -57,8 +85,9 @@ h1, h2 { color: #00e5c0; }
   </div>
 </nav>
 
+<!-- HERO -->
 <section>
-  <h1>Sulaiman "Sir Mean"</h1>
+  <h1>Sir Mean</h1>
   <p>Junior Data Analyst — Kano, Nigeria</p>
 
   <p>
@@ -68,55 +97,79 @@ h1, h2 { color: #00e5c0; }
   <a href="#projects" class="btn">View My Work</a>
 </section>
 
+<!-- PROJECTS -->
 <section id="projects">
   <h2>Projects</h2>
 
+  <!-- PROJECT 1 -->
   <div class="card">
-    <h3>Phone Shop Database</h3>
+    <h3>Telecom Churn Analysis</h3>
     <p>
-      Designed a structured database for managing products, customers, and sales.
+      Analyzed telecom customer data to identify why customers leave. Found key factors like contract type, monthly charges, and service issues.
     </p>
+    <img src="https://via.placeholder.com/800x400" alt="Telecom Project">
+    <p><a href="#">View Dashboard</a></p>
   </div>
 
+  <!-- PROJECT 2 -->
   <div class="card">
-    <h3>Sales Dashboard</h3>
+    <h3>Student Performance Analysis (Bangladesh)</h3>
     <p>
-      Built a dashboard showing revenue trends and top products using Excel/Power BI.
+      Studied student data to understand how study time, attendance, and background affect performance.
     </p>
+    <img src="https://via.placeholder.com/800x400" alt="Student Project">
+    <p><a href="#">View Report</a></p>
   </div>
 
+  <!-- PROJECT 3 -->
   <div class="card">
-    <h3>Customer Analysis</h3>
+    <h3>Sales Dashboard (Excel)</h3>
     <p>
-      Analyzed customer behavior to identify patterns and improve decision-making.
+      Built an interactive dashboard showing sales trends, revenue, and product performance.
     </p>
+    <img src="https://via.placeholder.com/800x400" alt="Sales Dashboard">
+    <p><a href="#">View Dashboard</a></p>
   </div>
+
 </section>
 
+<!-- ABOUT -->
 <section id="about">
   <h2>About Me</h2>
 
   <p>
-    My name is Sulaiman, also known as Sir Mean. I am learning data analysis and working towards becoming a data scientist.
+    My name is Sulaiman, also known as Sir Mean. I am a data analyst focused on solving real-world problems using data.
   </p>
 
   <p>
-    I focus on solving real problems using data and building practical skills.
+    I work with Excel, SQL, and data visualization tools to turn data into useful insights.
   </p>
 </section>
 
+<!-- CONTACT -->
 <section id="contact">
   <h2>Contact</h2>
 
-  <!-- ✏️ EDIT THIS -->
-  <p>Email: sulaimansunusi783@gmail.com</p>
-  <p>WhatsApp: +2347047985481</p>
-  <p>LinkedIn: www.linkedin.com/in/sulaiman-sunusi-sir-mean-3b70a92ab</p>
+  <p>
+    <!-- EMAIL -->
+    <a href="mailto:sulaimansunusi783@gmail.com" class="btn">Send Email</a>
+  </p>
+
+  <p>
+    <!-- WHATSAPP -->
+    <a href="https://wa.me/2347047985481" class="btn" target="_blank">Chat on WhatsApp</a>
+  </p>
+
+  <p>
+    <!-- LINKEDIN -->
+    <a href="https://www.linkedin.com/in/sulaiman-sunusi-sir-mean-3b70a92ab" class="btn" target="_blank">LinkedIn Profile</a>
+  </p>
 
 </section>
 
+<!-- FOOTER -->
 <footer style="text-align:center; padding:20px;">
-  Built by Sulaiman — 2026
+  Built by Sir Mean — 2026
 </footer>
 
 </body>
