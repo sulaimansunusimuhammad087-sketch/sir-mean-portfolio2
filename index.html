@@ -3,38 +3,35 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sir Mean — Data Analyst Portfolio</title>
+<title>Sulaiman Sir Mean — Data Analyst</title>
 
 <style>
 :root{
-  --bg1:#0f0c29;
-  --bg2:#302b63;
-  --bg3:#24243e;
+  --bg1:#0a0f2c;
+  --bg2:#1a1a40;
+  --bg3:#0d1b2a;
   --accent:#00ffd5;
   --text:#ffffff;
-  --muted:#b8b8b8;
+  --muted:#c7c7c7;
 }
 
 body{
   margin:0;
   font-family:Arial, sans-serif;
   color:var(--text);
-  background:linear-gradient(-45deg,var(--bg1),var(--bg2),var(--bg3));
-  background-size:400% 400%;
-  animation:bg 10s ease infinite;
-}
 
-@keyframes bg{
-  0%{background-position:0% 50%;}
-  50%{background-position:100% 50%;}
-  100%{background-position:0% 50%;}
+  /* MORE PROFESSIONAL BACKGROUND */
+  background: radial-gradient(circle at top,#1b2a6b,transparent 40%),
+              radial-gradient(circle at bottom,#00ffd5,transparent 40%),
+              linear-gradient(135deg,var(--bg1),var(--bg2),var(--bg3));
+  min-height:100vh;
 }
 
 /* NAV */
 nav{
   display:flex;
   justify-content:space-between;
-  padding:20px;
+  padding:18px 25px;
   background:rgba(0,0,0,0.4);
   backdrop-filter:blur(10px);
 }
@@ -43,6 +40,7 @@ nav a{
   color:var(--accent);
   margin-left:15px;
   text-decoration:none;
+  font-weight:bold;
 }
 
 /* SECTIONS */
@@ -57,31 +55,31 @@ h1,h2{color:var(--accent);}
 /* BUTTON */
 .btn{
   display:inline-block;
-  padding:10px 20px;
+  padding:10px 18px;
   background:var(--accent);
   color:black;
   border-radius:8px;
   text-decoration:none;
   font-weight:bold;
-  margin:5px 5px 5px 0;
+  margin:5px;
 }
 
-/* CARD */
+/* CARDS */
 .card{
   background:rgba(255,255,255,0.08);
   padding:20px;
   margin-bottom:20px;
-  border-radius:12px;
-  backdrop-filter:blur(10px);
+  border-radius:14px;
+  backdrop-filter:blur(12px);
   transition:0.3s;
 }
 
 .card:hover{
   transform:translateY(-5px);
-  background:rgba(0,255,213,0.15);
+  background:rgba(0,255,213,0.18);
 }
 
-/* MEDIA */
+/* MEDIA FIX */
 img,video{
   width:100%;
   border-radius:10px;
@@ -94,7 +92,7 @@ img,video{
 
 <!-- NAV -->
 <nav>
-  <div><b>Sir Mean</b></div>
+  <div><b>Sulaiman (Sir Mean)</b></div>
   <div>
     <a href="#projects">Projects</a>
     <a href="#about">About</a>
@@ -104,11 +102,14 @@ img,video{
 
 <!-- HERO -->
 <section>
-  <h1>Sir Mean</h1>
-  <p>Junior Data Analyst — Kano, Nigeria</p>
+  <h1>Sulaiman Sunusi Muhammad</h1>
+  <p><b>Also known as:</b> Sir Mean</p>
+  <p>Statistics Student (Level 200) — Bayero University Kano, Nigeria</p>
 
   <p>
-    I transform raw data into insights that help businesses make smart decisions.
+    I was born and raised in Kano State, Nigeria. I am passionate about statistics,
+    data analysis, and becoming a future data scientist. I use data to understand
+    real-world problems and help businesses make better decisions.
   </p>
 
   <a class="btn" href="#projects">View Projects</a>
@@ -118,31 +119,31 @@ img,video{
 <section id="projects">
   <h2>Projects</h2>
 
-  <!-- PROJECT 1 -->
+  <!-- 1 -->
   <div class="card">
     <h3>Bangladesh Student Performance Analysis</h3>
-    <p>Analyzed student performance to understand how study habits and attendance affect grades.</p>
+    <p>Analyzed student data to understand performance patterns and academic success factors.</p>
 
-    <video controls>
-      <source src="Bangladesh student performance dashboard.mp4" type="video/mp4">
+    <video controls preload="metadata">
+      <source src="bangladesh.mp4" type="video/mp4">
     </video>
   </div>
 
-  <!-- PROJECT 2 -->
+  <!-- 2 -->
   <div class="card">
     <h3>MTN Telecom Dashboard</h3>
-    <p>Built a telecom dashboard showing customer trends, usage, and revenue insights.</p>
+    <p>Built a dashboard showing customer behavior and telecom insights.</p>
 
     <img src="MTN Dashboard.jpg" alt="MTN Dashboard">
   </div>
 
-  <!-- PROJECT 3 -->
+  <!-- 3 -->
   <div class="card">
     <h3>Real Estate Analytics Dashboard</h3>
-    <p>Analyzed real estate data to understand pricing trends and property demand.</p>
+    <p>Analyzed real estate pricing trends and market behavior.</p>
 
-    <video controls>
-      <source src="REAL ESTATE DASHBOARD VIDEO.mp4" type="video/mp4">
+    <video controls preload="metadata">
+      <source src="real_estate.mp4" type="video/mp4">
     </video>
   </div>
 
@@ -153,27 +154,44 @@ img,video{
   <h2>About Me</h2>
 
   <p>
-    I am Sulaiman (Sir Mean), a passionate data analyst from Kano, Nigeria.
+    My name is <b>Sulaiman Sunusi Muhammad</b>, also known as <b>Sir Mean</b>.
   </p>
 
   <p>
-    I specialize in Excel, SQL, and data visualization to solve real-world problems.
+    I am a Statistics student at <b>Bayero University Kano (BUK)</b>, currently in Level 200.
+  </p>
+
+  <p>
+    I was born and raised in Kano, Nigeria. I have strong passion for data analysis,
+    statistics, and technology. My goal is to become a professional Data Scientist
+    who solves real-world problems using data.
+  </p>
+
+  <p>
+    I specialize in Excel, SQL, and data visualization tools to transform raw data into insights.
   </p>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-  <h2>Contact</h2>
+  <h2>Contact Me</h2>
 
-  <a class="btn" href="mailto:sulaimansunusi783@gmail.com">Email Me</a>
+  <a class="btn" href="mailto:sulaimansunusi783@gmail.com">Email</a>
+
   <a class="btn" href="https://wa.me/2347047985481" target="_blank">WhatsApp</a>
+
   <a class="btn" href="https://www.linkedin.com/in/sulaiman-sunusi-sir-mean-3b70a92ab" target="_blank">LinkedIn</a>
 
+  <!-- FACEBOOK -->
+  <a class="btn" href="https://www.facebook.com/Sulaiman Sunusi DA" target="_blank">Facebook</a>
+
+  <!-- TIKTOK -->
+  <a class="btn" href="https://www.tiktok.com/@sulaimansunusi33" target="_blank">TikTok</a>
 </section>
 
 <!-- FOOTER -->
 <footer style="text-align:center;padding:20px;">
-  Built by Sir Mean — Data Analyst Portfolio 2026
+  Sulaiman "Sir Mean" — Future Data Scientist © 2026
 </footer>
 
 </body>
