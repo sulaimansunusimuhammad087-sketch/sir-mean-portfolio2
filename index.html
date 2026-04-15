@@ -7,65 +7,84 @@
 
 <style>
 :root {
-  --bg: #0a0a0f;
-  --card: #16161f;
-  --accent: #00e5c0;
+  --bg1: #0f0c29;
+  --bg2: #302b63;
+  --bg3: #24243e;
+  --accent: #00ffd5;
   --text: #ffffff;
-  --muted: #aaaaaa;
 }
 
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  background: var(--bg);
+  font-family: Arial, sans-serif;
   color: var(--text);
+  background: linear-gradient(-45deg, var(--bg1), var(--bg2), var(--bg3));
+  background-size: 400% 400%;
+  animation: bg 10s ease infinite;
+}
+
+/* BACKGROUND ANIMATION */
+@keyframes bg {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
 }
 
 /* NAV */
 nav {
-  padding: 20px;
-  background: #111;
   display: flex;
   justify-content: space-between;
+  padding: 20px;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(10px);
 }
 
 nav a {
   color: var(--accent);
-  text-decoration: none;
   margin-left: 15px;
+  text-decoration: none;
 }
 
 /* SECTIONS */
 section {
-  padding: 60px 20px;
   max-width: 1000px;
   margin: auto;
+  padding: 60px 20px;
 }
 
+/* TITLE */
 h1, h2 {
   color: var(--accent);
 }
 
 /* BUTTON */
 .btn {
+  display: inline-block;
   padding: 10px 20px;
   background: var(--accent);
   color: black;
   text-decoration: none;
-  display: inline-block;
-  margin-top: 10px;
+  border-radius: 8px;
+  font-weight: bold;
 }
 
-/* CARD */
+/* CARDS */
 .card {
-  background: var(--card);
+  background: rgba(255,255,255,0.08);
   padding: 20px;
   margin-bottom: 20px;
-  border-radius: 10px;
+  border-radius: 12px;
+  transition: 0.3s;
+  backdrop-filter: blur(10px);
 }
 
-/* PROJECT IMAGE */
-img {
+.card:hover {
+  transform: translateY(-5px);
+  background: rgba(0,255,213,0.15);
+}
+
+/* IMAGES */
+img, video {
   width: 100%;
   border-radius: 10px;
   margin-top: 10px;
@@ -75,7 +94,6 @@ img {
 
 <body>
 
-<!-- NAV -->
 <nav>
   <div><b>Sir Mean</b></div>
   <div>
@@ -85,64 +103,57 @@ img {
   </div>
 </nav>
 
-<!-- HERO -->
 <section>
   <h1>Sir Mean</h1>
   <p>Junior Data Analyst — Kano, Nigeria</p>
 
-  <p>
-    I turn raw data into meaningful insights that help businesses make better decisions.
-  </p>
+  <p>I turn raw data into powerful insights for decision-making.</p>
 
-  <a href="#projects" class="btn">View My Work</a>
+  <a class="btn" href="#projects">View Projects</a>
 </section>
 
 <!-- PROJECTS -->
 <section id="projects">
   <h2>Projects</h2>
 
-  <!-- PROJECT 1 -->
   <div class="card">
     <h3>Telecom Churn Analysis</h3>
-    <p>
-      Analyzed telecom customer data to identify why customers leave. Found key factors like contract type, monthly charges, and service issues.
-    </p>
-    <img src="https://via.placeholder.com/800x400" alt="Telecom Project">
-    <p><a href="#">View Dashboard</a></p>
+    <p>Analyzed why customers leave telecom services and discovered key factors affecting churn.</p>
+
+    <!-- IMAGE PLACEHOLDER -->
+    <img src="your-image1.jpg" alt="Telecom Project">
+
+    <!-- VIDEO PLACEHOLDER -->
+    <video controls>
+      <source src="your-video1.mp4" type="video/mp4">
+    </video>
   </div>
 
-  <!-- PROJECT 2 -->
   <div class="card">
     <h3>Student Performance Analysis (Bangladesh)</h3>
-    <p>
-      Studied student data to understand how study time, attendance, and background affect performance.
-    </p>
-    <img src="https://via.placeholder.com/800x400" alt="Student Project">
-    <p><a href="#">View Report</a></p>
+    <p>Studied student performance based on study time, attendance, and background.</p>
+
+    <img src="your-image2.jpg" alt="Student Project">
+
+    <video controls>
+      <source src="your-video2.mp4" type="video/mp4">
+    </video>
   </div>
 
-  <!-- PROJECT 3 -->
   <div class="card">
-    <h3>Sales Dashboard (Excel)</h3>
-    <p>
-      Built an interactive dashboard showing sales trends, revenue, and product performance.
-    </p>
-    <img src="https://via.placeholder.com/800x400" alt="Sales Dashboard">
-    <p><a href="#">View Dashboard</a></p>
-  </div>
+    <h3>Sales Dashboard</h3>
+    <p>Built dashboard to track revenue, trends, and top products.</p>
 
+    <img src="your-image3.jpg" alt="Dashboard">
+
+  </div>
 </section>
 
 <!-- ABOUT -->
 <section id="about">
   <h2>About Me</h2>
-
   <p>
-    My name is Sulaiman, also known as Sir Mean. I am a data analyst focused on solving real-world problems using data.
-  </p>
-
-  <p>
-    I work with Excel, SQL, and data visualization tools to turn data into useful insights.
+    I am Sulaiman (Sir Mean), a data analyst focused on solving real-world problems using data.
   </p>
 </section>
 
@@ -150,27 +161,11 @@ img {
 <section id="contact">
   <h2>Contact</h2>
 
-  <p>
-    <!-- EMAIL -->
-    <a href="mailto:sulaimansunusi783@gmail.com" class="btn">Send Email</a>
-  </p>
-
-  <p>
-    <!-- WHATSAPP -->
-    <a href="https://wa.me/2347047985481" class="btn" target="_blank">Chat on WhatsApp</a>
-  </p>
-
-  <p>
-    <!-- LINKEDIN -->
-    <a href="https://www.linkedin.com/in/sulaiman-sunusi-sir-mean-3b70a92ab" class="btn" target="_blank">LinkedIn Profile</a>
-  </p>
+  <a class="btn" href="mailto:sulaimansunusi783@gmail.com">Email Me</a>
+  <a class="btn" href="https://wa.me/2347047985481" target="_blank">WhatsApp</a>
+  <a class="btn" href="https://www.linkedin.com/in/sulaiman-sunusi-sir-mean-3b70a92ab" target="_blank">LinkedIn</a>
 
 </section>
-
-<!-- FOOTER -->
-<footer style="text-align:center; padding:20px;">
-  Built by Sir Mean — 2026
-</footer>
 
 </body>
 </html>
